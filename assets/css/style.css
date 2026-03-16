@@ -1,0 +1,7 @@
+body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; }
+.site-header { background:#2b6cb0; color:white; padding:16px; }
+.site-header h1 { margin:0; font-size:1.4rem; }
+.site-header nav a { color:white; margin-right:12px; text-decoration:none; }
+main { padding:16px; }
+footer { padding:12px; text-align:center; background:#f2f2f2; margin-top:24px; }
+.card { border:1px solid #ddd; padding:12px; border-radius:6px; background:#fff; }

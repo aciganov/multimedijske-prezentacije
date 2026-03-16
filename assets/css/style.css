@@ -1,422 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Fraunces:ital,wght@0,400;0,700;1,400;1,700;1,900&display=swap');
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Multimedijske Prezentacije</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  <div class="shape shape-1"></div>
+  <div class="shape shape-2"></div>
+  <div class="shape shape-3"></div>
 
-:root {
-  --bg: #f0ede6;
-  --bg2: #e8e4db;
-  --red: #c0392b;
-  --red-light: #e8d5d3;
-  --red-dark: #922b21;
-  --text: #1a1a18;
-  --text-muted: #7a7a6e;
-  --text-light: #b0b0a0;
-  --white: #faf9f5;
-  --radius: 14px;
-  --radius-lg: 22px;
-}
+  <header class="site-header">
+    <h1>Aciganov</h1>
+    <nav>
+      <a href="index.html" class="active">Početna</a>
+      <a href="vjezbe/index.html">Vježbe</a>
+      <a href="zadace/index.html">Zadaće</a>
+    </nav>
+  </header>
 
-html { scroll-behavior: smooth; }
+  <main>
 
-body {
-  position: relative;
-  font-family: 'Outfit', sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-  overflow-x: hidden;
-}
+    <div class="hero">
+      <p class="hero-label">Multimedijske Prezentacije</p>
+      <h2 class="hero-name">
+        Ime
+        <span class="hero-name-italic">Prezime</span>
+      </h2>
+      <p>Dobrodošli na moj studentski portal. Ovdje možete pronaći sve vježbe i zadaće izrađene u sklopu kolegija.</p>
+    </div>
 
-/* ── DEKORATIVNI OBLICI ── */
-.shape {
-  position: absolute;
-  pointer-events: none;
-  z-index: 0;
-}
+    <div class="section">
+      <div class="section-heading">
+        <span class="section-num">01</span>
+        <h2>Vježbe</h2>
+      </div>
+      <div class="cards-grid">
+        <a href="vjezbe/vjezba-1.html" class="card">
+          <p class="card-number">Vježba 01</p>
+          <h3>Font, linkovi, tablice</h3>
+          <p class="card-meta">Tjedan 1</p>
+          <span class="card-status status--gotovo">Gotovo</span>
+        </a>
+        <!-- kopiraj gornji <a class="card"> blok za svaku novu vježbu -->
+      </div>
+    </div>
 
-.shape-1 {
-  top: -120px;
-  right: -120px;
-  width: 420px;
-  height: 420px;
-  background: radial-gradient(ellipse at 40% 40%, rgba(192,57,43,0.13) 0%, transparent 70%);
-  border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
-  animation: morph1 12s ease-in-out infinite;
-}
+    <div class="section">
+      <div class="section-heading">
+        <span class="section-num">02</span>
+        <h2>Zadaće</h2>
+      </div>
+      <div class="cards-grid">
+        <a href="zadace/zadaca-1.html" class="card">
+          <p class="card-number">Zadaća 01</p>
+          <h3>Naziv zadaće 1</h3>
+          <p class="card-meta">Tjedan 1</p>
+          <span class="card-status status--tijeku">U tijeku</span>
+        </a>
+        <!-- kopiraj gornji <a class="card"> blok za svaku novu zadaću -->
+      </div>
+    </div>
 
-.shape-2 {
-  bottom: -80px;
-  left: -100px;
-  width: 360px;
-  height: 360px;
-  background: radial-gradient(ellipse at 60% 60%, rgba(192,57,43,0.1) 0%, transparent 65%);
-  border-radius: 40% 60% 30% 70% / 60% 40% 70% 30%;
-  animation: morph2 15s ease-in-out infinite;
-}
+  </main>
 
-.shape-3 {
-  top: 45%;
-  right: -60px;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(ellipse, rgba(192,57,43,0.08) 0%, transparent 70%);
-  border-radius: 50% 50% 40% 60% / 40% 60% 50% 50%;
-  animation: morph1 10s ease-in-out infinite reverse;
-}
+  <footer>
+    <p>&copy; Multimedijske Prezentacije</p>
+  </footer>
 
-@keyframes morph1 {
-  0%, 100% { border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%; }
-  33%       { border-radius: 40% 60% 30% 70% / 70% 30% 60% 40%; }
-  66%       { border-radius: 70% 30% 50% 50% / 40% 70% 30% 60%; }
-}
-
-@keyframes morph2 {
-  0%, 100% { border-radius: 40% 60% 30% 70% / 60% 40% 70% 30%; }
-  33%       { border-radius: 60% 40% 70% 30% / 30% 70% 40% 60%; }
-  66%       { border-radius: 30% 70% 50% 50% / 60% 40% 60% 40%; }
-}
-
-/* ── HEADER ── */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.25rem 3rem;
-  background: rgba(240, 237, 230, 0.88);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-}
-
-.site-header h1 {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text);
-  letter-spacing: -0.01em;
-}
-
-.site-header nav {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.site-header nav a {
-  font-family: 'Outfit', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--text);
-  text-decoration: none;
-  padding: 0.45rem 1.1rem;
-  border-radius: 999px;
-  background: transparent;
-  border: 1.5px solid transparent;
-  transition: all 0.22s ease;
-}
-
-.site-header nav a:hover {
-  background: var(--red-light);
-  border-color: rgba(192,57,43,0.2);
-  color: var(--red-dark);
-}
-
-.site-header nav a.active {
-  background: var(--red);
-  color: #fff;
-  border-color: var(--red);
-}
-
-/* ── MAIN ── */
-main {
-  position: relative;
-  z-index: 1;
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 0 2.5rem 6rem;
-}
-
-/* ── HERO ── */
-.hero {
-  padding: 5rem 0;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-  animation: fadeUp 0.7s ease both;
-}
-
-.hero-label {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 1.75rem;
-}
-
-.hero-label::before {
-  content: '';
-  display: block;
-  width: 32px;
-  height: 2px;
-  background: var(--red);
-  border-radius: 2px;
-  flex-shrink: 0;
-}
-
-.hero-name {
-  font-family: 'Outfit', sans-serif;
-  font-size: clamp(3rem, 9vw, 6.5rem);
-  font-weight: 800;
-  line-height: 1.0;
-  letter-spacing: -0.04em;
-  color: var(--text);
-}
-
-.hero-name-italic {
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  font-weight: 900;
-  color: var(--red);
-  display: block;
-}
-
-.hero p {
-  font-size: 1rem;
-  color: var(--text-muted);
-  max-width: 440px;
-  line-height: 1.75;
-  margin-top: 1.5rem;
-  font-weight: 300;
-}
-
-/* ── SEKCIJE ── */
-.section {
-  padding: 4rem 0;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-  animation: fadeUp 0.6s ease both;
-}
-
-.section:last-child { border-bottom: none; }
-
-.section-heading {
-  display: flex;
-  align-items: baseline;
-  gap: 1rem;
-  margin-bottom: 2.5rem;
-}
-
-.section-num {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--text-light);
-  font-variant-numeric: tabular-nums;
-}
-
-.section-heading h2 {
-  font-family: 'Outfit', sans-serif;
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--text);
-}
-
-/* ── KARTICE ── */
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
-}
-
-.card {
-  position: relative;
-  background: var(--white);
-  border: 1px solid rgba(0,0,0,0.07);
-  border-radius: var(--radius-lg);
-  padding: 1.5rem;
-  text-decoration: none;
-  color: var(--text);
-  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
-  animation: fadeUp 0.5s ease both;
-}
-
-.card:nth-child(1) { animation-delay: 0.05s; }
-.card:nth-child(2) { animation-delay: 0.12s; }
-.card:nth-child(3) { animation-delay: 0.19s; }
-.card:nth-child(4) { animation-delay: 0.26s; }
-
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-  border-color: rgba(192,57,43,0.25);
-}
-
-.card-number {
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  margin-bottom: 0.6rem;
-}
-
-.card h3 {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 0.4rem;
-  letter-spacing: -0.01em;
-}
-
-.card-meta {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  font-weight: 400;
-  margin-bottom: 1rem;
-}
-
-.card-status {
-  display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.3rem 0.8rem;
-  border-radius: 999px;
-}
-
-.status--tijeku {
-  background: var(--bg2);
-  color: var(--text-muted);
-}
-
-.status--gotovo {
-  background: rgba(192,57,43,0.1);
-  color: var(--red-dark);
-}
-
-/* ── PAGE HEADER (podstranice) ── */
-.page-header {
-  padding: 3.5rem 0 2.5rem;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-  margin-bottom: 2.5rem;
-  animation: fadeUp 0.5s ease both;
-}
-
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  text-decoration: none;
-  margin-bottom: 1.25rem;
-  transition: color 0.2s;
-}
-
-.back-link:hover { color: var(--red); }
-
-.page-header h2 {
-  font-family: 'Outfit', sans-serif;
-  font-size: clamp(1.6rem, 4vw, 2.5rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-}
-
-.page-tag {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.3rem 0.85rem;
-  border-radius: 999px;
-  margin-top: 0.75rem;
-}
-
-.tag--vjezba {
-  background: rgba(192,57,43,0.1);
-  color: var(--red-dark);
-}
-
-.tag--zadaca {
-  background: var(--bg2);
-  color: var(--text-muted);
-}
-
-/* ── CONTENT ── */
-.content {
-  line-height: 1.8;
-  font-size: 1rem;
-  animation: fadeUp 0.6s 0.1s ease both;
-}
-
-.content h3 {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin: 2rem 0 0.7rem;
-  letter-spacing: -0.01em;
-}
-
-.content p { margin-bottom: 1rem; color: var(--text-muted); }
-.content ul, .content ol { padding-left: 1.5rem; margin-bottom: 1rem; color: var(--text-muted); }
-.content li { margin-bottom: 0.4rem; }
-
-.content code {
-  font-size: 0.875em;
-  background: var(--bg2);
-  border: 1px solid rgba(0,0,0,0.08);
-  padding: 0.15em 0.5em;
-  border-radius: 6px;
-  color: var(--red-dark);
-  font-family: 'Courier New', monospace;
-}
-
-.content pre {
-  background: var(--text);
-  border-radius: var(--radius);
-  padding: 1.25rem 1.5rem;
-  overflow-x: auto;
-  margin: 1.5rem 0;
-}
-
-.content pre code {
-  background: none;
-  border: none;
-  padding: 0;
-  font-size: 0.875rem;
-  color: #f0ede6;
-}
-
-/* ── FOOTER ── */
-footer {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.78rem;
-  color: var(--text-light);
-  border-top: 1px solid rgba(0,0,0,0.07);
-}
-
-/* ── ANIMACIJE ── */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(18px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* ── MOBILNA PRILAGODBA ── */
-@media (max-width: 640px) {
-  .site-header { padding: 1rem 1.25rem; }
-  main { padding: 0 1.25rem 4rem; }
-  .hero { padding: 3rem 0; }
-  .cards-grid { grid-template-columns: 1fr; }
-  .shape-1 { width: 250px; height: 250px; top: -60px; right: -60px; }
-  .shape-2 { width: 200px; height: 200px; }
-}
+</body>
+</html>

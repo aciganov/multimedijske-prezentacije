@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Multimedijske Prezentacije</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="shape shape-1"></div>
+  <div class="shape shape-2"></div>
+  <div class="shape shape-3"></div>
+
+  <header class="site-header">
+    <h1>Multimedijske prezentacije</h1>
+    <nav>
+      <a href="index.html" class="active">Početna</a>
+      <a href="vjezbe/index.html">Vježbe</a>
+      <a href="zadace/index.html">Zadaće</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="hero">
+      <p class="hero-label">Multimedijske Prezentacije</p>
+      <h2 class="hero-name">
+        Ana
+        <span class="hero-name-italic">Ciganović</span>
+      </h2>
+      <p>Dobrodošli na moju stranicu! Ovdje možete pronaći sve vježbe i zadaće koje ću objavljivati u prikladno vrijeme u sklopu kolegija Multimedijske prezentacije.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-heading">
+        <span class="section-num">01</span>
+        <h2>Vježbe</h2>
+      </div>
+      <div class="cards-grid">
+        <a href="vjezbe/vjezba1.html" class="card">
+          <p class="card-number">Vježba 01</p>
+          <h3>Font, linkovi, tablice</h3>
+          <p class="card-meta">Tjedan 1</p>
+          <span class="card-status status--gotovo">Gotovo</span>
+        </a>
+        <!-- kopiraj gornji <a class="card"> blok za svaku novu vježbu -->
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-heading">
+        <span class="section-num">02</span>
+        <h2>Zadaće</h2>
+      </div>
+      <div class="cards-grid">
+        <a href="zadace/zadaca1.html" class="card">
+          <p class="card-number">Zadaća 01</p>
+          <h3>Naziv zadaće 1</h3>
+          <p class="card-meta">Tjedan 1</p>
+          <span class="card-status status--tijeku">U tijeku</span>
+        </a>
+        <!-- kopiraj gornji <a class="card"> blok za svaku novu zadaću -->
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; Multimedijske Prezentacije</p>
+  </footer>
+
+</body>
+</html>

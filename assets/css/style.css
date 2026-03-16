@@ -23,6 +23,7 @@
 html { scroll-behavior: smooth; }
 
 body {
+  position: relative;
   font-family: 'Outfit', sans-serif;
   background-color: var(--bg);
   color: var(--text);
@@ -32,7 +33,7 @@ body {
 
 /* ── DEKORATIVNI OBLICI ── */
 .shape {
-  position: fixed;
+  position: absolute;
   pointer-events: none;
   z-index: 0;
 }

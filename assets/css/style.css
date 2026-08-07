@@ -421,12 +421,6 @@ footer {
   .shape-2 { width: 200px; height: 200px; }
 }
 
-/* ────────────────────────────────────────────────────────
-   DODATAK ZA motivacija.html (i slične podstranice s
-   horizontalni-meni / vertikalni-meni / glavni-okvir)
-   Dodaj ovo na kraj postojećeg style.css
-──────────────────────────────────────────────────────── */
-
 /* ── HEADER (bare <header>, koristi se umjesto .site-header) ── */
 header {
   position: sticky;

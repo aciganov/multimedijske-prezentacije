@@ -1,1 +1,197 @@
+<!doctype html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kviz znanja — Mjerenje topline</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+  .kviz-pitanje {
+    background: var(--white);
+    border: 1px solid rgba(0,0,0,0.07);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .kviz-pitanje h4 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.9rem;
+    color: var(--text);
+  }
+  .kviz-odgovori label {
+    display: block;
+    padding: 0.6rem 0.9rem;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    background: var(--bg2);
+    cursor: pointer;
+    font-size: 0.92rem;
+    color: var(--text);
+    transition: background 0.2s;
+  }
+  .kviz-odgovori label:hover { background: var(--red-light); }
+  .kviz-odgovori input { margin-right: 0.6rem; }
+  .kviz-feedback {
+    display: none;
+    margin-top: 0.6rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.5rem 0.9rem;
+    border-radius: 8px;
+  }
+  .kviz-feedback.tocno { background: rgba(46,139,87,0.12); color: #2e6b45; }
+  .kviz-feedback.netocno { background: rgba(192,57,43,0.1); color: var(--red-dark); }
+  #kviz-rezultat {
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    display: none;
+  }
+  #kviz-provjeri {
+    display: block;
+    margin: 1.5rem auto 0;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #fff;
+    background: var(--red);
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  #kviz-provjeri:hover { background: var(--red-dark); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Mjerenje topline — miješanje tople i hladne vode</h1>
+  <nav class="horizontalni-meni">
+    <ul>
+      <li><a href="motivacija.html">Motivacija</a></li>
+      <li><a href="pokus.html">Pokus</a></li>
+      <li><a href="rasprava.html">Rasprava</a></li>
+      <li><a href="tekst.html">Tekst i linkovi</a></li>
+      <li><a href="kviz.html" class="aktivno">Kviz znanja</a></li>
+      <li><a href="pojmovnik.html">Pojmovnik</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="glavni-okvir">
+  <nav class="vertikalni-meni">
+    <h2>Sadržaj lekcije</h2>
+    <ul>
+      <li><a href="motivacija.html">1. Motivacija</a></li>
+      <li><a href="pokus.html">2. Pokus</a></li>
+      <li><a href="rasprava.html">3. Rasprava</a></li>
+      <li><a href="tekst.html">4. Tekst i linkovi</a></li>
+      <li><a href="kviz.html" class="aktivno">5. Kviz znanja</a></li>
+      <li><a href="pojmovnik.html">6. Pojmovnik</a></li>
+    </ul>
+  </nav>
+  <main>
+    <p><a href="index.html" style="font-size:0.9em;">← Natrag na popis stranica završnog rada</a></p>
+    <h2>Kviz znanja</h2>
+    <p>Provjeri koliko si zapamtio/la iz lekcije o mjerenju topline. Odaberi jedan odgovor za svako pitanje, pa klikni "Provjeri odgovore".</p>
 
+    <form id="kviz-forma">
+      <div class="kviz-pitanje">
+        <h4>1. Što se događa kad pomiješamo toplu i hladnu vodu?</h4>
+        <div class="kviz-odgovori">
+          <label><input type="radio" name="p1" value="a"> Toplina prelazi s tijela više na tijelo niže temperature dok se ne izjednače</label>
+          <label><input type="radio" name="p1" value="b"> Hladna voda postaje još hladnija</label>
+          <label><input type="radio" name="p1" value="c"> Temperature ostaju nepromijenjene</label>
+        </div>
+        <p class="kviz-feedback" data-tocno="a" data-objasnjenje="Toplina uvijek prelazi s toplijeg na hladnije tijelo sve dok se ne uspostavi zajednička temperatura."></p>
+      </div>
+
+      <div class="kviz-pitanje">
+        <h4>2. Zašto hladna voda tone ispod tople vode?</h4>
+        <div class="kviz-odgovori">
+          <label><input type="radio" name="p2" value="a"> Jer je hladna voda prozirnija</label>
+          <label><input type="radio" name="p2" value="b"> Jer je hladna voda gušća od tople vode</label>
+          <label><input type="radio" name="p2" value="c"> Jer hladna voda ima veći tlak</label>
+        </div>
+        <p class="kviz-feedback" data-tocno="b" data-objasnjenje="Molekule hladne vode su bliže jedna drugoj, pa je gustoća veća i voda tone."></p>
+      </div>
+
+      <div class="kviz-pitanje">
+        <h4>3. Kad pomiješamo jednake mase vode od 40 °C i 20 °C, konačna temperatura je približno:</h4>
+        <div class="kviz-odgovori">
+          <label><input type="radio" name="p3" value="a"> 20 °C</label>
+          <label><input type="radio" name="p3" value="b"> 30 °C</label>
+          <label><input type="radio" name="p3" value="c"> 40 °C</label>
+        </div>
+        <p class="kviz-feedback" data-tocno="b" data-objasnjenje="Kod jednakih masa konačna temperatura je aritmetička sredina: (40+20)/2 = 30 °C."></p>
+      </div>
+
+      <div class="kviz-pitanje">
+        <h4>4. Zašto se topla voda postavljena iznad hladne vode gotovo ne miješa?</h4>
+        <div class="kviz-odgovori">
+          <label><input type="radio" name="p4" value="a"> Jer je sustav stabilan — lakša tekućina je već na vrhu, teža na dnu</label>
+          <label><input type="radio" name="p4" value="b"> Jer voda gubi boju</label>
+          <label><input type="radio" name="p4" value="c"> Jer se temperatura vode automatski izjednačava trenutno</label>
+        </div>
+        <p class="kviz-feedback" data-tocno="a" data-objasnjenje="Bez razlike u gustoći po visini nema pokretačke sile za strujanje (konvekciju), pa se tekućine miješaju samo sporom difuzijom."></p>
+      </div>
+
+      <div class="kviz-pitanje">
+        <h4>5. Uređaj koji se koristi za precizno mjerenje topline u kontroliranim uvjetima naziva se:</h4>
+        <div class="kviz-odgovori">
+          <label><input type="radio" name="p5" value="a"> Termometar</label>
+          <label><input type="radio" name="p5" value="b"> Barometar</label>
+          <label><input type="radio" name="p5" value="c"> Kalorimetar</label>
+        </div>
+        <p class="kviz-feedback" data-tocno="c" data-objasnjenje="Kalorimetar je izolirana posuda koja omogućuje precizno mjerenje razmijenjene topline."></p>
+      </div>
+
+      <button type="button" id="kviz-provjeri">Provjeri odgovore</button>
+      <p id="kviz-rezultat"></p>
+    </form>
+  </main>
+</div>
+<footer>
+  &copy; Mjerenje topline — završni rad, kolegij Multimedijske prezentacije
+</footer>
+
+<script>
+document.getElementById('kviz-provjeri').addEventListener('click', function () {
+  const pitanja = document.querySelectorAll('.kviz-pitanje');
+  let tocno = 0;
+
+  pitanja.forEach(function (pitanje, i) {
+    const naziv = 'p' + (i + 1);
+    const odabrano = pitanje.querySelector('input[name="' + naziv + '"]:checked');
+    const feedback = pitanje.querySelector('.kviz-feedback');
+    const tocanOdgovor = feedback.dataset.tocno;
+
+    feedback.style.display = 'block';
+
+    if (!odabrano) {
+      feedback.textContent = 'Nisi odabrao/la odgovor.';
+      feedback.className = 'kviz-feedback netocno';
+      return;
+    }
+
+    if (odabrano.value === tocanOdgovor) {
+      tocno++;
+      feedback.textContent = 'Točno! ' + feedback.dataset.objasnjenje;
+      feedback.className = 'kviz-feedback tocno';
+    } else {
+      feedback.textContent = 'Netočno. ' + feedback.dataset.objasnjenje;
+      feedback.className = 'kviz-feedback netocno';
+    }
+  });
+
+  const rezultat = document.getElementById('kviz-rezultat');
+  rezultat.style.display = 'block';
+  rezultat.textContent = 'Rezultat: ' + tocno + ' / ' + pitanja.length;
+});
+</script>
+</body>
+</html>

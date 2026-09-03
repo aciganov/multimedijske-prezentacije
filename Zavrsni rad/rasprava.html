@@ -5,68 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rasprava — Mjerenje topline</title>
 <link rel="stylesheet" href="../assets/css/style.css">
-<style>
-  .kviz-pitanje {
-    background: var(--white);
-    border: 1px solid rgba(0,0,0,0.07);
-    border-radius: var(--radius-lg);
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  .kviz-pitanje h4 {
-    font-family: 'Outfit', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 0.9rem;
-    color: var(--text);
-  }
-  .kviz-odgovori label {
-    display: block;
-    padding: 0.6rem 0.9rem;
-    margin-bottom: 0.5rem;
-    border-radius: 10px;
-    background: var(--bg2);
-    cursor: pointer;
-    font-size: 0.92rem;
-    color: var(--text);
-    transition: background 0.2s;
-  }
-  .kviz-odgovori label:hover { background: var(--red-light); }
-  .kviz-odgovori input { margin-right: 0.6rem; }
-  .kviz-feedback {
-    display: none;
-    margin-top: 0.6rem;
-    font-size: 0.85rem;
-    font-weight: 600;
-    padding: 0.5rem 0.9rem;
-    border-radius: 8px;
-  }
-  .kviz-feedback.tocno { background: rgba(46,139,87,0.12); color: #2e6b45; }
-  .kviz-feedback.netocno { background: rgba(192,57,43,0.1); color: var(--red-dark); }
-  #kviz-rezultat {
-    text-align: center;
-    font-family: 'Outfit', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-top: 1.5rem;
-    display: none;
-  }
-  #kviz-provjeri {
-    display: block;
-    margin: 1.5rem auto 0;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: #fff;
-    background: var(--red);
-    border: none;
-    padding: 0.75rem 2rem;
-    border-radius: 999px;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  #kviz-provjeri:hover { background: var(--red-dark); }
-</style>
 </head>
 <body>
 <header>

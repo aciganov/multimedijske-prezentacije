@@ -1,1 +1,112 @@
+<!doctype html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rasprava — Mjerenje topline</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header>
+  <h1>Mjerenje topline — miješanje tople i hladne vode</h1>
+  <nav class="horizontalni-meni">
+    <ul>
+      <li><a href="motivacija.html">Motivacija</a></li>
+      <li><a href="pokus.html">Pokus</a></li>
+      <li><a href="rasprava.html" class="aktivno">Rasprava</a></li>
+      <li><a href="tekst.html">Tekst i linkovi</a></li>
+      <li><a href="kviz.html">Kviz znanja</a></li>
+      <li><a href="pojmovnik.html">Pojmovnik</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="glavni-okvir">
+  <nav class="vertikalni-meni">
+    <h2>Sadržaj lekcije</h2>
+    <ul>
+      <li><a href="motivacija.html">1. Motivacija</a></li>
+      <li><a href="pokus.html">2. Pokus</a></li>
+      <li><a href="rasprava.html" class="aktivno">3. Rasprava</a></li>
+      <li><a href="tekst.html">4. Tekst i linkovi</a></li>
+      <li><a href="kviz.html">5. Kviz znanja</a></li>
+      <li><a href="pojmovnik.html">6. Pojmovnik</a></li>
+    </ul>
+  </nav>
+  <main>
+    <p><a href="index.html" style="font-size:0.9em;">← Natrag na popis stranica završnog rada</a></p>
+    <h2>Zašto se voda ponaša baš tako?</h2>
 
+    <h3>Gustoća kao pokretač miješanja</h3>
+    <p>
+      Rezultati pokusa objašnjavaju se razlikom u gustoći tople i hladne vode. 
+      Kod hladnije vode molekule se sporije gibaju i bliže su jedna drugoj, 
+      pa je volumen manji, a gustoća veća.
+      Hladna voda je "teža" po jedinici volumena dok topla voda ima suprotno
+      svojstvo (molekule se brže gibaju i međusobno udaljavaju, volumen raste,
+      a gustoća pada, topla voda je "lakša").
+    </p>
+    <p>
+      Kad je hladna (gušća) voda postavljena iznad tople (rjeđe), sustav je
+      nestabilan: gravitacija povlači hladnu vodu prema dolje kroz toplu
+      vodu, a topla voda se probija prema gore. To gibanje naziva se
+      <strong>konvekcija</strong> i upravo ono aktivno miješa dvije tekućine
+      dok se temperatura ne izjednači. Kad je, u suprotnom slučaju, topla voda već na
+      vrhu, a hladna na dnu. Sustav je stabilan, nema sile koja bi tekućine
+      pomicala jednu kroz drugu pa se miješaju samo sporom difuzijom na
+      granici dodira što je znantno sporiji proces.
+    </p>
+
+    <h3>Jednadžba toplinske ravnoteže</h3>
+    <p>
+      Kad se dvije tekućine pomiješaju i prepuste dovoljno vremena, sustav
+      dosegne <strong>toplinsku ravnotežu</strong>, obje tekućine imaju istu
+      konačnu temperaturu T<sub>k</sub>. Uz pretpostavku da nema gubitka
+      topline u okolinu, količina topline koju otpusti topla voda jednaka je
+      količini topline koju primi hladna voda:
+    </p>
+    <p style="text-align:center; font-size:1.1rem;">
+      m<sub>1</sub> · c · (T<sub>1</sub> − T<sub>k</sub>) = m<sub>2</sub> · c · (T<sub>k</sub> − T<sub>2</sub>)
+    </p>
+    <p>
+      gdje su m<sub>1</sub> i T<sub>1</sub> masa i početna temperatura tople
+      vode, m<sub>2</sub> i T<sub>2</sub> masa i početna temperatura hladne
+      vode, a c specifični toplinski kapacitet vode (isti za obje jer je
+      riječ o istoj tvari). Kako je c zajednički faktor, može se pokratiti,
+      pa jednadžbu možemo preurediti i izraziti konačnu temperaturu:
+    </p>
+    <p style="text-align:center; font-size:1.1rem;">
+      T<sub>k</sub> = (m<sub>1</sub> · T<sub>1</sub> + m<sub>2</sub> · T<sub>2</sub>) / (m<sub>1</sub> + m<sub>2</sub>)
+    </p>
+
+    <h3>Odgovor na pitanje iz uvoda</h3>
+    <p>
+      U lekciji <a href="motivacija.html">Motivacija</a> postavili smo pitanje:
+      hoće li mješanje jednakih količina vode od 40 °C i 20 °C dati točno
+      30 °C? Prema gornjoj formuli, ako je m<sub>1</sub> = m<sub>2</sub>, mase
+      se pokrate i dobivamo T<sub>k</sub> = (T<sub>1</sub> + T<sub>2</sub>) / 2
+      = (40 + 20) / 2 = 30 °C. Dakle — da, kod jednakih masa konačna
+      temperatura doista je aritmetička sredina.
+    </p>
+    <p>
+      No ako pomiješamo puno više hladne vode nego tople, rezultat više neće
+      biti na sredini — konačna temperatura bit će bliža početnoj temperaturi
+      hladne vode, jer ona ima veći "udio" u ukupnoj masi i time veći utjecaj
+      na krajnji rezultat. To izravno pokazuje formula: veći m<sub>2</sub>
+      povlači T<sub>k</sub> bliže vrijednosti T<sub>2</sub>.
+    </p>
+
+    <h3>Ograničenja pokusa</h3>
+    <p>
+      U stvarnom pokusu dio topline uvijek se gubi u okolni zrak i u samu
+      bocu (stijenke plastike također se griju), pa izmjerena konačna
+      temperatura obično bude nešto niža od one koju predviđa idealna
+      formula. Ta razlika je normalna i može posebno poslužiti kao dodatna
+      tema za raspravu o gubicima topline i toplinskoj izolaciji.
+    </p>
+  </main>
+</div>
+<footer>
+  &copy; Mjerenje topline — završni rad, kolegij Multimedijske prezentacije
+</footer>
+</body>
+</html>

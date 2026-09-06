@@ -5,6 +5,69 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rasprava — Mjerenje topline</title>
 <link rel="stylesheet" href="../assets/css/style.css">
+<style>
+  .rp-pitanje {
+    background: var(--white);
+    border: 1px solid rgba(0,0,0,0.07);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .rp-pitanje h4 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.9rem;
+    color: var(--text);
+  }
+  .rp-opcije {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .rp-opcija {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.6rem 0.9rem;
+    border-radius: 10px;
+    background: var(--bg2);
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.92rem;
+    color: var(--text);
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .rp-opcija:hover:not(:disabled) {
+    background: var(--red-light);
+  }
+  .rp-opcija:disabled {
+    cursor: default;
+  }
+  .rp-opcija.odabrano-tocno {
+    background: rgba(46,139,87,0.15);
+    border-color: #2e6b45;
+    color: #2e6b45;
+    font-weight: 600;
+  }
+  .rp-opcija.odabrano-netocno {
+    background: rgba(192,57,43,0.12);
+    border-color: var(--red-dark);
+    color: var(--red-dark);
+    font-weight: 600;
+  }
+  .rp-feedback {
+    display: none;
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
+    padding: 0.6rem 0.9rem;
+    border-radius: 8px;
+    line-height: 1.6;
+  }
+  .rp-feedback.tocno { background: rgba(46,139,87,0.1); color: #2e6b45; }
+  .rp-feedback.netocno { background: rgba(192,57,43,0.1); color: var(--red-dark); }
+</style>
 </head>
 <body>
 <header>
@@ -34,8 +97,8 @@
   </nav>
   <main>
     <p><a href="index.html" style="font-size:0.9em;">← Natrag na popis stranica završnog rada</a></p>
-  <h2>Evo što se desilo nakon što izmaknemo karticu:</h2>
-    
+  <h2>Evo što se desi nakon što izmaknemo karticu:</h2>
+
     <div class="video-omot">
       <iframe
         src="https://www.youtube.com/embed/QWRk4Mv-mNM"
@@ -43,13 +106,13 @@
         allowfullscreen>
       </iframe>
     </div>
-    
+
     <h2>Zašto se voda ponaša baš tako?</h2>
 
     <h3>Gustoća kao pokretač miješanja</h3>
     <p>
-      Rezultati pokusa objašnjavaju se razlikom u gustoći tople i hladne vode. 
-      Kod hladnije vode molekule se sporije gibaju i bliže su jedna drugoj, 
+      Rezultati pokusa objašnjavaju se razlikom u gustoći tople i hladne vode.
+      Kod hladnije vode molekule se sporije gibaju i bliže su jedna drugoj,
       pa je volumen manji, a gustoća veća.
       Hladna voda je "teža" po jedinici volumena dok topla voda ima suprotno
       svojstvo (molekule se brže gibaju i međusobno udaljavaju, volumen raste,
@@ -99,7 +162,7 @@
     </p>
     <p>
       No ako pomiješamo puno više hladne vode nego tople, rezultat više neće
-      biti na sredini — konačna temperatura bit će bliža početnoj temperaturi
+      biti na sredini nego će konačna temperatura bit bliža početnoj temperaturi
       hladne vode, jer ona ima veći "udio" u ukupnoj masi i time veći utjecaj
       na krajnji rezultat. To izravno pokazuje formula: veći <strong>m<sub>2</sub></strong>
       povlači <strong>T<sub>k</sub></strong> bliže vrijednosti <strong>T<sub>2</sub></strong>.
@@ -113,12 +176,10 @@
       formula. Ta razlika je normalna i može posebno poslužiti kao dodatna
       tema za raspravu o gubicima topline i toplinskoj izolaciji.
     </p>
-  </main>
-</div>
 
     <h2 id="interaktivna-rasprava">Provjeri svoje razumijevanje</h2>
     <p>Odaberi odgovor za svako pitanje — odmah ćeš vidjeti je li točan, uz kratko objašnjenje.</p>
- 
+
     <div class="rp-pitanje">
       <h4>1. Kad smo maknuli karticu između hladne vode (gore) i kipuće vode (dolje), što se dogodilo?</h4>
       <div class="rp-opcije">
@@ -129,7 +190,7 @@
       </div>
       <p class="rp-feedback"></p>
     </div>
- 
+
     <div class="rp-pitanje">
       <h4>2. Zašto se hladna voda kreće prema dolje kroz toplu vodu?</h4>
       <div class="rp-opcije">
@@ -140,7 +201,7 @@
       </div>
       <p class="rp-feedback"></p>
     </div>
- 
+
     <div class="rp-pitanje">
       <h4>3. U drugoj varijanti (topla voda iznad hladne), zašto se tekućine gotovo nisu pomiješale?</h4>
       <div class="rp-opcije">
@@ -151,7 +212,7 @@
       </div>
       <p class="rp-feedback"></p>
     </div>
- 
+
     <div class="rp-pitanje">
       <h4>4. U kontrolnom pokusu (dvije hladne vode jednake temperature, različito obojene), što očekujemo?</h4>
       <div class="rp-opcije">
@@ -162,7 +223,7 @@
       </div>
       <p class="rp-feedback"></p>
     </div>
- 
+
     <div class="rp-pitanje">
       <h4>5. Kod stvarnog mjerenja (ne idealne formule) konačne temperature smjese 40 °C i 20 °C vode jednakih masa, očekujemo:</h4>
       <div class="rp-opcije">
@@ -178,18 +239,18 @@
 <footer>
   &copy; Mjerenje topline — završni rad, kolegij Multimedijske prezentacije
 </footer>
- 
+
 <script>
 document.querySelectorAll('.rp-pitanje').forEach(function (pitanje) {
   const opcije = pitanje.querySelectorAll('.rp-opcija');
   const feedback = pitanje.querySelector('.rp-feedback');
- 
+
   opcije.forEach(function (opcija) {
     opcija.addEventListener('click', function () {
       const tocno = opcija.dataset.tocno === 'true';
- 
+
       opcije.forEach(function (o) { o.disabled = true; });
- 
+
       if (tocno) {
         opcija.classList.add('odabrano-tocno');
         feedback.textContent = 'Točno! ' + opcija.dataset.objasnjenje;
@@ -206,10 +267,5 @@ document.querySelectorAll('.rp-pitanje').forEach(function (pitanje) {
   });
 });
 </script>
-
-<footer>
-  &copy; Mjerenje topline — završni rad, kolegij Multimedijske prezentacije
-</footer>
-  
 </body>
 </html>

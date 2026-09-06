@@ -252,7 +252,7 @@ document.querySelectorAll('.rp-pitanje').forEach(function (pitanje) {
 
       if (tocno) {
         opcija.classList.add('odabrano-tocno');
-        feedback.textContent = 'Točno! ' + opcija.dataset.objasnjenje;
+        feedback.textContent = opcija.dataset.objasnjenje;
         feedback.className = 'rp-feedback tocno';
       } else {
         opcija.classList.add('odabrano-netocno');
